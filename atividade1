@@ -1,0 +1,29 @@
+def main():
+    numeros = input("Digite os números inteiros separados por espaço: ").split()
+
+    if not numeros:
+        print("Erro: Nenhum número foi informado.")
+        return
+
+    numeros = [int(num) for num in numeros]
+
+    quantidade = len(numeros)
+
+    media = sum(numeros) / quantidade
+
+    menor = min(numeros)
+
+    maior = max(numeros)
+
+    numeros_ordem_crescente = sorted(numeros)
+
+    print(f"Quantidade de números: {quantidade}")
+    print(f"Valor médio dos números: {media}")
+    print(f"Menor número: {menor}")
+    print(f"Maior número: {maior}")
+    print("Lista de números em ordem crescente:")
+    for num in numeros_ordem_crescente:
+        print(num, end=" ")
+
+if __name__ == "__main__":
+    main()
